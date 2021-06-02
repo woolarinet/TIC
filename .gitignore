@@ -1,2 +1,4 @@
 .DS_STORE
 config.py
+__pycache__
+.vscode
