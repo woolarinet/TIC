@@ -37,6 +37,9 @@ def call_github_graphql(query: str):
     :params:
         query: valid graphql query
     '''
+    if not GITHUB_TOKEN:
+        raise Exception('GITHUB_TOKEN must be set in environment variable')
+
     res = requests.post(
         url=GITHUB_GRAPHQL_URL,
         headers={'Authorization': f'bearer {GITHUB_TOKEN}'},
