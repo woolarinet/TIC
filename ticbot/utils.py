@@ -4,8 +4,7 @@ from http import HTTPStatus
 import requests
 
 
-GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
-SLACK_HOOK_URL = 'https://hooks.slack.com/services/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'
+SLACK_HOOK_URL = 'https://hooks.slack.com/services/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'
 
 
 def send_slack_message(data: dict):

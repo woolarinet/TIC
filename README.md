@@ -45,3 +45,24 @@ pip install -r requirements.txt
 cd ticbot
 python bot.py
 ```
+
+### Deployment
+
+deploy with AWS Lambda
+
+```
+# set GITHUB_TOKEN to environment variable from .env
+source .env
+
+# build and push docker image to ECR
+./build.sh
+
+# Deploy new image to lambda in console
+```
+
+- lambda function si triggerd by cloudwatch schedule with `cron(0 14 * * ? *)` (UTC)
+
+#### TODO
+
+- [ ] move GITHUB_TOKEN into lambda function
+- [ ] edit slack message
